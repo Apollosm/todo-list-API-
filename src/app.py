@@ -22,7 +22,7 @@ def hello_world():
 @app.route('/todos/<int:position>', methods=['DELETE'])
 def delete_todo(position):
     print("This is the position to delete: ",position)
-    todos.pop()
+    todos.pop(position)
     return jsonify(todos)
 
 
